@@ -12,7 +12,7 @@ Perfect level 40–60 progression content, inspired by the much-loved Turtle WoW
 - Two new quartermasters spawned in their respective villages  
 - Full reputation progression to Exalted (mutually exclusive factions)  
 - Tiered vendor access: Neutral → Honored → Revered → Exalted  
-- All rewards are Bind on Pickup and require reputation with the selling faction  
+- All rewards require reputation with the selling faction  (Besides the Centaur Longbow)
 - 100% SQL + one DBC patch – no source code changes needed  
 
 ## Installation
