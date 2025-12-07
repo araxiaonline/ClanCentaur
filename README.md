@@ -66,30 +66,31 @@ The following custom items are added and sold by the respective faction Quarterm
 
 | Entry | Item Name | Quality | Required Rank |
 | :--- | :--- | :--- | :--- |
-| **200300** | [Dar'kar of the Third Khan](Screenshots/200300.png) | Epic | Revered |
-| **200301** | [Ceremonial Magram Dagger](Screenshots/200301.png) | Rare | Honored |
-| **200302** | [Gauntlets of the Khan](Screenshots/200302.png) | Rare | Honored |
-| **200303** | [Magram Windstriker](Screenshots/200303.png) | Rare | Honored |
-| **200304** | [Centaur Battle Harness](Screenshots/200304.png) | Rare | Revered |
-| **200305** | [Dustguider Sash](Screenshots/200305.png) | Rare | Revered |
-| **200306** | [Centaur Longbow](Screenshots/200306.png) | Uncommon | Friendly |
-| **200307** | [Centaur Stompers](Screenshots/200307.png) | Uncommon | Friendly |
-| **200308** | [Packrunner Harness](Screenshots/200308.png) | Uncommon | Friendly |
-| **200309** | [Windwatcher Sash](Screenshots/200309.png) | Uncommon | Friendly |
+| **200300** | [Dar'kar of the Third Khan](Screenshots/200300.png) | Epic | Exalted |
+| **200301** | [Ceremonial Magram Dagger](Screenshots/200301.png) | Rare | Revered |
+| **200302** | [Gauntlets of the Khan](Screenshots/200302.png) | Rare | Revered |
+| **200303** | [Magram Windstriker](Screenshots/200303.png) | Rare | Revered |
+| **200304** | [Centaur Battle Harness](Screenshots/200304.png) | Rare | Exalted |
+| **200305** | [Dustguider Sash](Screenshots/200305.png) | Rare | Exalted |
+| **200306** | [Centaur Longbow](Screenshots/200306.png) | Uncommon | N/A |
+| **200307** | [Centaur Stompers](Screenshots/200307.png) | Uncommon | Honored |
+| **200308** | [Packrunner Harness](Screenshots/200308.png) | Uncommon | Honored |
+| **200309** | [Windwatcher Sash](Screenshots/200309.png) | Uncommon | Honored |
 
 ### Gelkis Clan Centaur (Faction 92)
 
 | Entry | Item Name | Quality | Required Rank |
 | :--- | :--- | :--- | :--- |
-| **200310** | [Batu'kar of the Second Khan](Screenshots/200310.png) | Epic | Revered |
-| **200311** | [Ceremonial Centaur Ring](Screenshots/200311.png) | Rare | Honored |
-| **200312** | [Gelkis Earthbinder](Screenshots/200312.png) | Rare | Honored |
-| **200313** | [Maraudine Oath Pauldrons](Screenshots/200313.png) | Rare | Honored |
-| **200314** | [Windbinder Gloves](Screenshots/200314.png) | Rare | Revered |
-| **200315** | [Mantle of Centaur Authority](Screenshots/200315.png) | Rare | Revered |
-| **200316** | [Centaur Skullcap](Screenshots/200316.png) | Uncommon | Friendly |
-| **200317** | [Grips of the Unified Storm](Screenshots/200317.png) | Uncommon | Friendly |
-| **200318** | [Warleader Sash](Screenshots/200318.png) | Uncommon | Friendly |
+| **200310** | [Batu'kar of the Second Khan](Screenshots/200310.png) | Epic | Exalted |
+| **200311** | [Ceremonial Centaur Ring](Screenshots/200311.png) | Rare | Revered |
+| **200312** | [Gelkis Earthbinder](Screenshots/200312.png) | Rare | Revered |
+| **200313** | [Maraudine Oath Pauldrons](Screenshots/200313.png) | Rare | Revered |
+| **200314** | [Windbinder Gloves](Screenshots/200314.png) | Rare | Exalted |
+| **200315** | [Mantle of Centaur Authority](Screenshots/200315.png) | Rare | Exalted |
+| **200316** | [Centaur Skullcap](Screenshots/200316.png) | Uncommon | Honored |
+| **200317** | [Grips of the Unified Storm](Screenshots/200317.png) | Uncommon | Honored |
+| **200318** | [Warleader Sash](Screenshots/200318.png) | Uncommon | Honored |
+| **200306** | [Centaur Longbow](Screenshots/200306.png) | Uncommon | N/A |
 
 ***
 
