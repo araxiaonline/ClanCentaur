@@ -1,108 +1,91 @@
-# 🗺️ Gelkis/Magram Centaur Reputation System for AzerothCore
+# Gelkis & Magram Centaur Reputation System  
+**AzerothCore • Pure SQL + DBC Module • No Core Changes Required**
 
-[![AzerothCore](https://img.shields.io/badge/AzerothCore-WoW%20Server-red?logo=worldofwarcraft)](https://github.com/azerothcore/azerothcore-wotlk)
+[![AzerothCore](https://img.shields.io/badge/AzerothCore-supported-brightgreen?logo=worldofwarcraft&style=flat)](https://www.azerothcore.org/)
 
-This project introduces a complete, functional **reputation and vendor system** for the Gelkis and Magram centaur factions in Desolace. It is specifically designed to provide **level 40-60 content** and fill in classic WoW progression gaps. Players can align with one tribe and earn unique, custom-designed rewards by eliminating their rivals.
+This module adds a complete, lore-friendly reputation and vendor system for the **Gelkis Clan Centaur** (Faction 92) and **Magram Clan Centaur** (Faction 93) in Desolace.  
+Perfect level 40–60 progression content, inspired by the much-loved Turtle WoW version but tweaked and adapted for AzerothCore. (It's not a one for one but works.)
 
-**Inspiration:** This content is based on the reputation systems originally found on **Turtle WoW**, specifically the vendors [Earthcaller Jalyssa (320)](https://database.turtle-wow.org/?npc=80942) and [Deathcaller Aisha (321)](https://database.turtle-wow.org/?npc=80941). The items and stats have been custom-tweaked for this project.
+## Features
 
-***
+- 19 custom items (Uncommon → Rare → Epic) with unique stats & display IDs  
+- Two new quartermasters spawned in their respective villages  
+- Full reputation progression to Exalted (mutually exclusive factions)  
+- Tiered vendor access: Neutral → Honored → Revered → Exalted  
+- All rewards are Bind on Pickup and require reputation with the selling faction  
+- 100% SQL + one DBC patch – no source code changes needed  
 
-## ✨ Project Features
-
-* **19 Custom Items:** Introduces unique gear (Uncommon, Rare, and Epic) with custom stats and display IDs, providing meaningful rewards for characters level 40-60.
-* **Faction Quartermasters:** Creates and spawns two new vendor NPCs:
-    * **320:** Earthcaller Jalyssa `<Gelkis Quartermaster>` (Faction 92)
-    * **321:** Deathcaller Aisha `<Magram Quartermaster>` (Faction 93)
-* **Reputation to Exalted:** The `Faction.csv` file allows reputation progression with these factions up to **Exalted**.
-* **Tiered Requirements:** All vendor items require a specific reputation rank (Friendly, Honored, Revered, Exalted) with the selling faction.
-
-***
-
-## 💾 Installation Guide
-
-Installation requires two main steps: updating your **database** (server-side) and updating your **client/DBC files** (client-sideand server-side).
+## Installation
 
 ### Prerequisites
+- Access to your `world` database
+- Any DBC editor that can import CSV (WDBX Editor, Keira3, etc.)
 
-* **Database Access:** Access to your MySQL/MariaDB server (via DBeaver, HeidiSQL, etc.).
-* **WDBX Editor:** A tool capable of importing CSV data into the `Faction.dbc` format.
+### Step 1 – DBC Patch (Faction.dbc)
 
-<br>
+Required for correct faction names and Exalted reputation cap in-game.
 
-### Step 1: Update Client/DBC Data (`Faction.csv`)
+1. Open your `Faction.dbc` in your DBC editor  
+2. Import the provided `Faction.csv` (overwrite IDs 92 and 93)  
+3. Save and place the new `Faction.dbc` in:  
+   - Client patch/MPQ or `Data\enUS\DBFilesClient\` folder  
+   - Server `data/dbc/` folder (if your core loads DBC files)
 
-This step is **required** to ensure the Faction names and reputation progress up to Exalted are correctly displayed in the game client.
+### Step 2 – Database Import
 
-1.  **Open WDBX Editor:** Use the WDBX Editor (or similar tool) to open your existing `Faction.dbc` file.
-2.  **Import CSV:** Use the tool's **Import** function to load the data from the provided `Faction.csv` file.
-3.  **Save & Deploy:** Save the modified file as `Faction.dbc` and place it in the appropriate locations:
-    * **Client:** Place it into your client's custom MPQ or data folder (e.g., `WoW\Data\enUS\DBFilesClient\Faction.dbc`).
-    * **Server:** Place the file in your server's data directory if your core loads DBC files from there.
+Execute these two SQL files in order against your `world` database:
 
-<br>
+- `Items.sql` → Adds all 19 custom item templates  
+- `NPCVendors.sql` → Spawns the quartermasters and fills their vendor lists
 
-### Step 2: Import Database Data (`.sql` Files)
+## Quartermasters
 
-These files must be executed sequentially against your **`world`** database.
+| Faction             | ID | Quartermaster Name      | Entry | Location         |
+|---------------------|----|--------------------------|-------|------------------|
+| Gelkis Clan Centaur | 92 | Earthcaller Jalyssa      | 320   | Gelkis Village   |
+| Magram Clan Centaur | 93 | Deathcaller Aisha        | 321   | Magram Village   |
 
-1.  **Import Item Templates**
-    * **File:** `Items.sql`
-    * **Action:** Execute this SQL file against your `world` database.
-    * **Purpose:** Inserts all 19 custom items into the `item_template` table, setting their required faction (92 or 93) and reputation rank.
-
-2.  **Import NPC and Vendor Data**
-    * **File:** `NPCVendors.sql`
-    * **Action:** Execute this SQL file against your `world` database.
-    * **Purpose:** Inserts and spawns the two Quartermaster NPCs (**320** and **321**) and populates their vendor lists in the `npc_vendor` table.
-
-***
-
-## 📜 Item List
-
-The following custom items are added and sold by the respective faction Quartermaster. Click the item name to view the corresponding image:
+## Item Rewards
 
 ### Magram Clan Centaur (Faction 93)
 
-| Entry | Item Name | Quality | Required Rank |
-| :--- | :--- | :--- | :--- |
-| **200300** | [Dar'kar of the Third Khan](Screenshots/200300.png) | Epic | Exalted |
-| **200301** | [Ceremonial Magram Dagger](Screenshots/200301.png) | Rare | Revered |
-| **200302** | [Gauntlets of the Khan](Screenshots/200302.png) | Rare | Revered |
-| **200303** | [Magram Windstriker](Screenshots/200303.png) | Rare | Revered |
-| **200304** | [Centaur Battle Harness](Screenshots/200304.png) | Rare | Exalted |
-| **200305** | [Dustguider Sash](Screenshots/200305.png) | Rare | Exalted |
-| **200306** | [Centaur Longbow](Screenshots/200306.png) | Uncommon | N/A |
-| **200307** | [Centaur Stompers](Screenshots/200307.png) | Uncommon | Honored |
-| **200308** | [Packrunner Harness](Screenshots/200308.png) | Uncommon | Honored |
-| **200309** | [Windwatcher Sash](Screenshots/200309.png) | Uncommon | Honored |
+| Entry  | Item Name                    | Quality  | Required Reputation |
+|--------|------------------------------|----------|---------------------|
+| 200300 | Dar'kar of the Third Khan    | Epic     | Exalted             |
+| 200301 | Ceremonial Magram Dagger     | Rare     | Revered             |
+| 200302 | Gauntlets of the Khan        | Rare     | Revered             |
+| 200303 | Magram Windstriker           | Rare     | Revered             |
+| 200304 | Centaur Battle Harness       | Rare     | Exalted             |
+| 200305 | Dustguider Sash              | Rare     | Exalted             |
+| 200306 | Centaur Longbow              | Uncommon | Neutral             |
+| 200307 | Centaur Stompers             | Uncommon | Honored             |
+| 200308 | Packrunner Harness           | Uncommon | Honored             |
+| 200309 | Windwatcher Sash             | Uncommon | Honored             |
 
 ### Gelkis Clan Centaur (Faction 92)
 
-| Entry | Item Name | Quality | Required Rank |
-| :--- | :--- | :--- | :--- |
-| **200310** | [Batu'kar of the Second Khan](Screenshots/200310.png) | Epic | Exalted |
-| **200311** | [Ceremonial Centaur Ring](Screenshots/200311.png) | Rare | Revered |
-| **200312** | [Gelkis Earthbinder](Screenshots/200312.png) | Rare | Revered |
-| **200313** | [Maraudine Oath Pauldrons](Screenshots/200313.png) | Rare | Revered |
-| **200314** | [Windbinder Gloves](Screenshots/200314.png) | Rare | Exalted |
-| **200315** | [Mantle of Centaur Authority](Screenshots/200315.png) | Rare | Exalted |
-| **200316** | [Centaur Skullcap](Screenshots/200316.png) | Uncommon | Honored |
-| **200317** | [Grips of the Unified Storm](Screenshots/200317.png) | Uncommon | Honored |
-| **200318** | [Warleader Sash](Screenshots/200318.png) | Uncommon | Honored |
-| **200306** | [Centaur Longbow](Screenshots/200306.png) | Uncommon | N/A |
+| Entry  | Item Name                        | Quality  | Required Reputation |
+|--------|----------------------------------|----------|---------------------|
+| 200310 | Batu'kar of the Second Khan      | Epic     | Exalted             |
+| 200311 | Ceremonial Centaur Ring          | Rare     | Revered             |
+| 200312 | Gelkis Earthbinder               | Rare     | Revered             |
+| 200313 | Maraudine Oath Pauldrons         | Rare     | Revered             |
+| 200314 | Windbinder Gloves                | Rare     | Exalted             |
+| 200315 | Mantle of Centaur Authority      | Rare     | Exalted             |
+| 200316 | Centaur Skullcap                 | Uncommon | Honored             |
+| 200317 | Grips of the Unified Storm       | Uncommon | Honored             |
+| 200318 | Warleader Sash                   | Uncommon | Honored             |
+| 200306 | Centaur Longbow                  | Uncommon | Neutral             |
 
-***
+All item screenshots are in the `Screenshots/` folder.
 
-## ⚙️ Configuration Details & Usage
+## How to Play
 
-| Faction Name | Faction ID | NPC Entry ID | NPC Flag (`npcflag`) | Location |
-| :--- | :--- | :--- | :--- | :--- |
-| **Gelkis Clan** | **92** | 320 | **8064** | Gelkis Village |
-| **Magram Clan** | **93** | 321 | **4224** | Magram Village |
+1. Go to Desolace and pick your side (Gelkis or Magram)  
+2. Kill members of the rival clan to gain reputation with your chosen faction  
+3. Visit your faction quartermaster when you reach the required rank  
+4. Buy exclusive, powerful gear made for levels 40–60
 
-### In-Game Usage
+Enjoy the centaur war!
 
-1.  **Choose an Ally:** Decide whether to ally with the Gelkis or the Magram.
-2.  **Reputation Grind:** Eliminate members of the **opposing** centaur tribe in Desolace to gain reputation with your chosen faction.
-3.  **Visit Quartermaster:** Once the required reputation rank is met, visit the corresponding Quartermaster to purchase the items.
+Made with ❤️ for the AzerothCore community
