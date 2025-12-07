@@ -21,7 +21,7 @@ This project introduces a complete, functional **reputation and vendor system** 
 
 ## 💾 Installation Guide
 
-Installation requires two main steps: updating your **database** (server-side) and updating your **client/DBC files** (client-side).
+Installation requires two main steps: updating your **database** (server-side) and updating your **client/DBC files** (client-sideand server-side).
 
 ### Prerequisites
 
