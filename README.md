@@ -85,7 +85,3 @@ All item screenshots are in the `Screenshots/` folder.
 2. Kill members of the rival clan to gain reputation with your chosen faction  
 3. Visit your faction quartermaster when you reach the required rank  
 4. Buy exclusive, powerful gear made for levels 40–60
-
-Enjoy the centaur war!
-
-Made with ❤️ for the AzerothCore community
