@@ -80,8 +80,9 @@ Execute these two SQL files in order against your `world` database:
 All item screenshots are in the `Screenshots/` folder.
 
 ## How to Play
-
 1. Go to Desolace and pick your side (Gelkis or Magram)  
 2. Kill members of the rival clan to gain reputation with your chosen faction  
 3. Visit your faction quartermaster when you reach the required rank  
 4. Buy exclusive, powerful gear made for levels 40–60
+
+*Special Thanks to Hex for the help on the Wow Modding Discord*
