@@ -25,7 +25,7 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 
 DELETE FROM `creature` WHERE (`id1` = 321);
 INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
-(9999359, 321, 0, 0, 0, 0, 0, 1, 1, 0, 3619.09, -3757.98, 41.6906, 1.7461, 300, 0, 0, 277, 0, 0, 0, 0, 0, '', NULL, 0, NULL);
+(10001218, 321, 0, 0, 1, 0, 0, 1, 1, 0, -1583.57, 933.561, 89.9789, 0.00612077, 300, 0, 0, 222, 0, 0, 0, 0, 0, '', NULL, 0, 'Deathcaller Aisha');
 
 
 -- ######################################################--
@@ -34,7 +34,7 @@ INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, 
 -- ######################################################--
 DELETE FROM `creature_template` WHERE (`entry` = 320);
 INSERT INTO `creature_template` (`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `KillCredit1`, `KillCredit2`, `name`, `subname`, `IconName`, `gossip_menu_id`, `minlevel`, `maxlevel`, `exp`, `faction`, `npcflag`, `speed_walk`, `speed_run`, `speed_swim`, `speed_flight`, `detection_range`, `scale`, `rank`, `dmgschool`, `DamageModifier`, `BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `PetSpellDataId`, `VehicleId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `HoverHeight`, `HealthModifier`, `ManaModifier`, `ArmorModifier`, `ExperienceModifier`, `RacialLeader`, `movementId`, `RegenHealth`, `mechanic_immune_mask`, `spell_school_immune_mask`, `flags_extra`, `ScriptName`, `VerifiedBuild`) VALUES
-(320, 0, 0, 0, 0, 0, 'Earthcaller Jalyssa', 'Gelkis Quartermaster', 'Buy', 0, 11, 11, 0, 35, 3, 1, 1.14286, 1, 1, 18, 1, 0, 0, 1, 2000, 2000, 1, 1, 1, 512, 2048, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 2, '', 12340);
+(320, 0, 0, 0, 0, 0, 'Earthcaller Jalyssa', 'Gelkis Quartermaster', 'Buy', 0, 11, 11, 0, 35, 8064, 1, 1.14286, 1, 1, 18, 1, 0, 0, 1, 2000, 2000, 1, 1, 1, 512, 2048, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 2, '', 12340);
 
 DELETE FROM `creature_template_model` WHERE (`CreatureID` = 320);
 INSERT INTO `creature_template_model` (`CreatureID`, `Idx`, `CreatureDisplayID`, `DisplayScale`, `Probability`, `VerifiedBuild`) VALUES
@@ -54,4 +54,4 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 
 DELETE FROM `creature` WHERE (`id1` = 320);
 INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
-(9999028, 320, 0, 0, 369, 0, 0, 1, 1, 0, -46.9284, 1243.94, -135.668, 1.6867, 300, 0, 0, 127, 0, 0, 0, 0, 0, '', NULL, 0, NULL);
+(10001217, 320, 0, 0, 1, 0, 0, 1, 1, 0, -1928.31, 2595.88, 63.0435, 5.64905, 300, 0, 0, 222, 0, 0, 0, 0, 0, '', NULL, 0, NULL);
